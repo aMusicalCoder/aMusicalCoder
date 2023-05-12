@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>aMusicalCoder</title>
+		<link rel="stylesheet" href="src/styles.css">
+		<link rel="stylesheet" href="src/animate.min.css"/>
+		<script src="https://kit.fontawesome.com/fca6bc6911.js" crossorigin="anonymous"></script>
+	</head>
+
+	<body>
+		<div id="particles-js"></div>
+
+		<a href="javascript:void(0);" id="hamLink" onclick="slideMenuOut()"><i id="hamburger" class="fa-solid fa-bars"></i></a>
+		<div id="sidebar" class="animate__animated animate__fadeInLeft">
+			<a id="arrowLink" href="javascript:void(0);" onclick="slideMenuIn()"><i class="fa-solid fa-arrow-left"></i></a>
+			<a onclick="about()" href="javascript:void(0);">About</a>
+			<a onclick="portfolio()" href="javascript:void(0);">Portfolio</a>
+			<a onclick="blog()" href="javascript:void(0);">Blog</a>
+			<a href="javascript:void(0);"><i class="fa-brands fa-github"></i></a>
+			<a href="javascript:void(0);"><i class="fa-brands fa-linkedin"></i></a>
+		</div>
+
+		<main>
+            <div id="front_page_text" class="animate__animated main_text">
+                <h1 class="animate__animated animate__bounceInDown">Benjamin Wagner</h1>
+                <h3 class="animate__animated animate__bounceInUp">IT Contractor, Hobbyist Programmer</h3>
+                <p class="animate__animated animate__fadeIn animate__delay-1s">
+                    <br>I am a self-taught programmer/computer technician. I got my start around 8 years old when I would make command prompt games in C++ with the help of programming books my dad had lying around. Since then, computers have been my biggest passion (alongside Jazz music). Over the years since, I have worked to develop my skills through various endeavors such as programming autonomous robots for my high school robotics team, participating in Ludum Dare game development competitions, freelance web development in College, CTF's and a multitude of personal projects. <br><br>I am dedicated to the lifelong student ethos and therefore, learning and continually sharpening my skills has and will always be my top priority.
+                </p>
+            </div>
+            
+            <div id="portfolio_text" class="animate__animated main_text">
+                
+                    
+                
+                    
+                        <h1>Giant Eagle Store Locator</h1>
+                        <p><p>This simple web application takes a Giant Eagle/GetGo store number as input and outputs the street address. 
+I built it out of frustration with the official Giant Eagle store locator website which was slow and did not have an interface for inputting store numbers. You could only check specific store numbers by editing the URL manually.
+This application provides a quick reference for field service engineers on the road. 
+The data was procured from an official excel spreadsheet, which I scraped and formatted to my liking using Python and pandas. I then created a sqlite database with this formatted csv data, which is accessed on the website through Sql.Js. Finally, I made sure the site was responsive and performed correctly on a wide array of devices. The front-end is pure HTML/CSS and the static website is hosted on Github Pages. All code is available <a href="">here</a> on my Github. Check out the site <a href="">here.</a></p>
+</p>
+						<br><br>
+                    
+                
+                    
+                        <h1>Games I Made in High School</h1>
+                        <p><p>Most of my self-taught knowledge of programming came from developing games throughout my childhood. When I was 8, I started out by making text-based adventure games in C++. I followed along with all the game development books I could find (my dad had a lot lying around) and found a deep passion for programming in the process. The only remnants I have found in all these years of playing with code are as follows:</p>
+
+<h2 id="amorphous-arena">Amorphous Arena:</h2>
+
+<p>RTS game I created from scratch in under 48 hours for the Ludum Dare 35 game developer competition. 
+Created only using C++ and the graphics library SDL.</p>
+
+<h2 id="business-simulator">Business Simulator:</h2>
+
+<p>Small and unfinished web game I started to work on in HTML, CSS, and JS.
+Not much to show off here, but I left it in for archive purposes.</p>
+
+<h2 id="chapmans-adventure">Chapman’s Adventure:</h2>
+
+<p>Unfinished top-down adventure game. Created using C++ and the graphics library SFML.
+Basic graphics engine implemented but nothing further.</p>
+
+<h2 id="swipe-it-2014-2015">Swipe It! (2014-2015)</h2>
+
+<p>First iteration of a mobile-game I had worked on over multiple years. Created with Action-Script 3.0 and the Starling Framework.
+You swipe across an arrow that appears on the screen in a random direction.
+Your goal is to get as many swipes as you can before the delay between your swipes becomes too long.</p>
+
+<h2 id="swipe-it-2016">Swipe It! (2016)</h2>
+
+<p>Final iteration of Swipe It!.
+The graphics have been greatly improved, with animations too.
+The main game mechanics has been improved, with power-ups and a surrounding story. You are trying to keep a generator running.
+The geometric arrow has been replaced with a wire.</p>
+
+<h2 id="worm-fishing2014">Worm Fishing(2014):</h2>
+
+<p>Unfinished game where worms float to the sky and you have to flip a bucket with “realistic” physics to catch them.
+Bucket physics fully functional at the point of abandonment.</p>
+
+<p>All code can be found <a href="https://github.com/aMusicalCoder">here</a> on my Github.</p>
+</p>
+						<br><br>
+                    
+                
+                    
+                        <h1>aMusicalCoder (This Website)</h1>
+                        <p><p>This website serves the purpose of my personal portfolio and blog. The particle effects are created using JSON and the particles.js library. The animations use the animate.css library. The rest of the front-end is HTML/CSS/JS, with markdown content served via Jekyll(Ruby) and hosted on Github Pages. Despite using Jekyll to serve content, I did not use any templates or layouts as per a typical Jekyll website. This is because I wanted the entire website to be on a single page so as not to interrupt the particle effect or any of the animations. All code is available <a href="">here</a> on my Github.</p>
+</p>
+						<br><br>
+                    
+                
+                    
+                        <h1>Python Scripting and USACO Training</h1>
+                        <p><p>Over the course of my career in Tech, I have created various python scripts to serve specific purposes.
+For example, while working help-desk at Pine-Richland School District, I created a script to automate csv formatting for a mass e-mail, and one to automate csv formatting for a mass letter containing standardized testing information.
+Additionally, I am undertaking the USA Computing Olympiad (USACO) on-line training in the efforts of improving my abilities as a programmer and to learn some of the nuance and wisdom that lies within competitive programming. To aid such an effort, I follow up some USACO problems with analysis and reflection.
+All code is available <a href="">here</a> on my Github.</p>
+</p>
+						<br><br>
+                    
+                
+            </div>
+
+			<div id="blog_page_text" class="animate__animated main_text">
+				
+                    
+                        <h1>Blog Coming Soon!</h1>
+                        <p><p>With this blog, I intend to chronicle the progress I make with my personal projects. This will be mainly be for documentation purposes but will also serve to further establish my credibility as I gain more experience.</p>
+
+<p>Some such projects are as follows:</p>
+
+<ul>
+  <li>Finishing my Modal Improvisation Practice Tool website.</li>
+  <li>Tonearm Rewiring of an Onkyo CP-1040F Turntable.</li>
+  <li>Learning x86 Assembly Language and reading <em>The Zen of Assembly Language</em>.</li>
+</ul>
+</p>
+						<br><br>
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+			</div>
+		</main>
+
+		<!-- Head is loaded before body, so standard to put JS at bottom of body element unless you need something sooner. -->
+		<script src="src/jquery.min.js"></script>
+		<script src="src/index.js"></script>
+		<script src="src/particles.js"></script>
+	</body>
+
+</html>

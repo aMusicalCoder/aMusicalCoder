@@ -1,0 +1,64 @@
+---
+---
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>aMusicalCoder</title>
+		<link rel="stylesheet" href="src/styles.css">
+		<link rel="stylesheet" href="src/animate.min.css"/>
+		<script src="https://kit.fontawesome.com/fca6bc6911.js" crossorigin="anonymous"></script>
+	</head>
+
+	<body>
+		<div id="particles-js"></div>
+
+		<a href="javascript:void(0);" id="hamLink" onclick="slideMenuOut()"><i id="hamburger" class="fa-solid fa-bars"></i></a>
+		<div id="sidebar" class="animate__animated animate__fadeInLeft">
+			<a id="arrowLink" href="javascript:void(0);" onclick="slideMenuIn()"><i class="fa-solid fa-arrow-left"></i></a>
+			<a onclick="about()" href="javascript:void(0);">About</a>
+			<a onclick="portfolio()" href="javascript:void(0);">Portfolio</a>
+			<a onclick="blog()" href="javascript:void(0);">Blog</a>
+			<a href="https://github.com/aMusicalCoder"><i class="fa-brands fa-github"></i></a>
+			<a href="https://www.linkedin.com/in/benjamin-wagner-027b75152/"><i class="fa-brands fa-linkedin"></i></a>
+		</div>
+
+		<main>
+            <div id="front_page_text" class="animate__animated main_text">
+                <h1 class="animate__animated animate__bounceInDown">Benjamin Wagner</h1>
+                <h3 class="animate__animated animate__bounceInUp">IT Contractor, Hobbyist Programmer</h3>
+                <p class="animate__animated animate__fadeIn animate__delay-1s">
+                    <br>I am a self-taught programmer/computer technician. I got my start around 8 years old when I would make command prompt games in C++ with the help of programming books my dad had lying around. Since then, computers have been my biggest passion (alongside Jazz music). Over the years since, I have worked to develop my skills through various endeavors such as programming autonomous robots for my high school robotics team, participating in Ludum Dare game development competitions, freelance web development in College, CTF's and a multitude of personal projects. <br><br>I am dedicated to the lifelong student ethos and therefore, learning and continually sharpening my skills has and will always be my top priority.
+                </p>
+            </div>
+            
+            <div id="portfolio_text" class="animate__animated main_text">
+                {% for post in site.posts %}
+                    {% if post.category == "portfolio" %}
+                        <h1>{{post.title}}</h1>
+                        <p>{{post.content}}</p>
+						<br><br>
+                    {% endif %}
+                {% endfor %}
+            </div>
+
+			<div id="blog_page_text" class="animate__animated main_text">
+				{% for post in site.posts %}
+                    {% if post.category == "blog" %}
+                        <h1>{{post.title}}</h1>
+                        <p>{{post.content}}</p>
+						<br><br>
+                    {% endif %}
+                {% endfor %}
+			</div>
+		</main>
+
+		<!-- Head is loaded before body, so standard to put JS at bottom of body element unless you need something sooner. -->
+		<script src="src/jquery.min.js"></script>
+		<script src="src/index.js"></script>
+		<script src="src/particles.js"></script>
+	</body>
+
+</html>

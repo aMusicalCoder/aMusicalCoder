@@ -1,0 +1,186 @@
+/* Reset default styling for manual control. */
+*, ::before, ::after {
+	padding:  0;
+	margin:  0;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+* {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+
+/* Declare global css variables here. */
+:root {
+	--background-color: #505168 /*independence*/;
+	--content-color: #0A2342 /*oxford blue*/;
+	--text-color1: #8F909E /*gray blue*/;
+	--ghost-white: #FAFAFF;
+}
+
+/* Import Fonts. */
+@font-face{
+	font-family: Quicksand;
+	src: url(../fonts/Quicksand-Light.otf);
+}
+
+html{
+	background:  var(--content-color);
+}
+
+h1, h2, h3, p, a, li {
+	font-family: Quicksand;
+}
+
+a{
+	text-decoration: none;
+}
+
+/* - Particle effect - */
+#particles-js canvas {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+
+#sidebar {
+	height: 100%;
+	width: 15%;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	background-color: var(--background-color);
+	text-align: center;
+}
+
+#sidebar a {
+	display: block;
+	margin-top: 75px;
+	font-size: 3rem;
+	color: var(--ghost-white);
+}
+
+#sidebar a:first-of-type{
+	display: none;
+	float: right;
+	padding: 10px;
+	margin-top: 0px;
+}
+
+.main_text {
+	position: absolute;
+	width: 75%;
+	text-align: left;
+	top: 20%;
+	left: 20%;
+}
+
+.main_text h1 {
+	color: var(--ghost-white);
+	font-size: 5rem;
+}
+
+.main_text h2 {
+	color: var(--ghost-white);
+	font-size: 3.25rem;
+}
+
+.main_text h3 {
+	color: var(--text-color1);
+	font-size: 2.25rem;
+	overflow: hidden;
+}
+
+.main_text p, .main_text li {
+	color: var(--ghost-white);
+	font-size: 2rem;
+	overflow: hidden;
+	margin-bottom: 1.5rem;
+}
+
+.main_text a {
+	color: var(--text-color1);
+}
+
+ul, ol, li {
+	list-style-type: disc;
+	list-style-position: inside; /* Discs were not showing. Because of the manual padding, they were off the page. This rule fixes that. */	
+}
+
+#hamburger {
+	position: fixed;
+	display: none;
+	color: var(--ghost-white);
+	font-size: 3rem;
+	margin: 25px;
+}
+
+#portfolio_text, #blog_page_text {
+	display: none;
+}
+
+/* Smartphone portrait mode.  */
+@media screen and (max-width: 767px) {
+	.main_text {
+		top: 15%;
+	}
+	.main_text h1 {
+		font-size: 2.5rem;
+	}
+	.main_text h2 {
+		font-size: 2rem;
+	}
+	.main_text h3 {
+		font-size: 1.5rem;
+	}
+	.main_text p, .main_text li {
+		font-size: 1.25rem;
+	}
+	#sidebar {
+		width: 50%;
+		display: none;
+	}
+	#sidebar a{
+		font-size: 2.5rem;
+	}
+	#hamburger {
+		display: block;
+	}
+	#arrowLink {
+		display: none;
+	}
+}
+
+/* Tablet Devices and some landspace smartphones. */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	.main_text h1 {
+		font-size: 3.5rem;
+	}
+	.main_text h2 {
+		font-size: 2.75rem;
+	}
+	.main_text h3 {
+		font-size: 2rem;
+	}
+	.main_text p, .main_text li {
+		font-size: 1.5rem;
+	}
+	#sidebar a{
+		font-size: 1.75rem;
+	}
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+	#sidebar a{
+		font-size: 2.25rem;
+	}
+}

@@ -1,0 +1,9 @@
+title: aMusicalCoder
+email: wagner.benjamin99@gmail.com
+description: >- # this means to ignore newlines until "baseurl:"
+    Portfolio Site for Benjamin Wagner, Full-Stack Developer and Jazz Guitarist.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://www.amusicalcoder.com" # the base hostname & protocol for your site, e.g. http://example.com
+domain: "amusicalcoder.com"
+#twitter_username: jekyllrb
+github_username:  aMusicalCoder
