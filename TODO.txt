@@ -1,3 +1,3 @@
--Add links to Github and Twitter to sidebar (icons from fontawesome)
+-Change margins for sidebar links when mobile devices are in landscape mode, github/linkedin icons don't show up.
 
 -Add pictures to portfolio posts (if it looks right), GIFs ideally.
